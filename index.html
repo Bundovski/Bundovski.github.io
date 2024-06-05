@@ -1,0 +1,78 @@
+<!DOCTYPE html>s
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Wir werden Eltern!</h1>
+    <div id="countdown">
+        <!-- <h1>Countdown bis zur Geburt unseres neuen Familenmitglieds.</h1> -->
+        <div class="box">
+            <h2>Tage</h2>
+            <div id="days"></div>
+        </div>
+        <div class="box">
+            <h2>Stunden</h2>
+            <div id="hours"></div>
+        </div>
+        <div class="box">
+            <h2>Minuten</h2>
+            <div id="minutes"></div>
+        </div>
+        <div class="box">
+            <h2>Sekunden</h2>
+            <div id="seconds"></div>
+        </div>       
+    </div>
+
+    
+        <img  src="./img/2d-baby-ultrasound-scan.png" alt="Ultraschall" />
+    
+
+    <script>
+        function calculateDateOfBirthCountdown() {
+            var now = new Date();
+            var currentMonth = now.getMonth() + 1;
+            var currentDay = now.getDate();
+
+            var expectedDateOfBirth = new Date(2024,11,24);
+            var diffSeconds = Math.floor((expectedDateOfBirth.getTime() - now.getTime()) / 1000);
+
+            let days = 0;
+            let hours = 0;
+            let minutes = 0;
+            let seconds = 0;
+
+            if (currentMonth !== 12 || (currentMonth === 12 && currentDay !== 25)) {
+                days = Math.floor(diffSeconds / (3600 * 24));
+                diffSeconds -= days * 3600 * 24;
+                hours = Math.floor(diffSeconds / 3600);
+                diffSeconds -= hours * 3600;
+                minutes = Math.floor(diffSeconds / 60);
+                diffSeconds -= minutes * 60;
+                seconds = diffSeconds;
+            }
+
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+
+            setTimeout(calculateDateOfBirthCountdown, 1000);
+        }
+
+        calculateDateOfBirthCountdown();
+    </script>
+</body>
+</html>
