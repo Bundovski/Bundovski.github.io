@@ -13,21 +13,23 @@ header {
 }
 
 h1 {
-  margin: 0;
-  font-family: "Borel", cursive;
-  font-size: 400%;
-}
-
-h2 {
-  margin: 40px 0 -20px 0px;
-  color: #333;
+  margin: 20px 0px -20px 0px;
   font-family: "Borel", cursive;
   font-size: 300%;
 }
 
-.borel-font {
+h2 {
+  margin: 40px 0 20px 0px;
+  color: #333;
   font-family: "Borel", cursive;
-  font-size: 160%;
+  font-size: 250%;
+}
+
+.borel-font {
+  color: #333;
+  font-family: "Borel", cursive;
+  font-size: 200%;
+  margin: 20px;
 }
 
 img {
