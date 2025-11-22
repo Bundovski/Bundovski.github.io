@@ -1,45 +1,64 @@
-<!DOCTYPE html>s
+<!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown</title>
+    <title>Wir sind guter Hoffnung</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" >
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" >
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css" />
 
     <style>
     </style>
 </head>
+
 <body>
-    <h1>Wir werden Eltern!</h1>
-    <div id="countdown">
-        <!-- <h1>Countdown bis zur Geburt unseres neuen Familenmitglieds.</h1> -->
-        <div class="box">
-            <h2>Tage</h2>
-            <div id="days"></div>
+
+    <header>
+        <h1>Wir sind guter Hoffnung</h1>
+    </header>
+    <h2>Ich bin schwanger</h2>
+    <main>
+        <div class="images">
+            <img src="./img/20251122-ultrasound-scan.jpg" alt="Beispielbild 1">
         </div>
-        <div class="box">
-            <h2>Stunden</h2>
-            <div id="hours"></div>
-        </div>
-        <div class="box">
-            <h2>Minuten</h2>
-            <div id="minutes"></div>
-        </div>
-        <div class="box">
-            <h2>Sekunden</h2>
-            <div id="seconds"></div>
-        </div>       
+    </main>
+    <div class="borel-font">
+        Arno & Birthe 💜
     </div>
 
-    
-        <img class="img-fluid" src="./img/2d-baby-ultrasound-scan.png" alt="Ultraschall" />
-    
+
+    <!-- <h1>Wir werden Eltern!</h1> -->
+    <!-- <div id="countdown"> -->
+    <!-- <h1>Countdown bis zur Geburt unseres neuen Familenmitglieds.</h1> -->
+    <!-- <div class="box">
+            <h2>Tage</h2>
+            <div id="days"></div>
+        </div> -->
+    <!-- <div class="box">
+            <h2>Stunden</h2>
+            <div id="hours"></div>
+        </div> -->
+    <!-- <div class="box">
+            <h2>Minuten</h2>
+            <div id="minutes"></div>
+        </div> -->
+    <!-- <div class="box">
+            <h2>Sekunden</h2>
+            <div id="seconds"></div>
+        </div> -->
+    <!-- </div> -->
+
+
+    <!-- <img class="img-fluid" src="./img/2d-baby-ultrasound-scan.png" alt="Ultraschall" /> -->
+
 
     <script>
         function calculateDateOfBirthCountdown() {
@@ -47,7 +66,7 @@
             var currentMonth = now.getMonth() + 1;
             var currentDay = now.getDate();
 
-            var expectedDateOfBirth = new Date(2024,11,24);
+            var expectedDateOfBirth = new Date(2024, 11, 24);
             var diffSeconds = Math.floor((expectedDateOfBirth.getTime() - now.getTime()) / 1000);
 
             let days = 0;
@@ -76,4 +95,5 @@
         calculateDateOfBirthCountdown();
     </script>
 </body>
+
 </html>
