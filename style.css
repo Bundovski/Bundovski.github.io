@@ -7,7 +7,8 @@ body {
 }
 
 header { 
-  background: linear-gradient(90deg, rgba(83, 128, 201, 1) 0%, rgba(98, 191, 137, 1) 50%, rgba(230, 179, 255, 1) 100%);
+  /* background: linear-gradient(90deg, rgba(83, 128, 201, 1) 0%, rgba(98, 191, 137, 1) 50%, rgba(230, 179, 255, 1) 100%); */
+  background-color:  rgba(230, 179, 255, 1);
   color: #333;
   padding: 30px 0;
 }
@@ -23,6 +24,20 @@ h2 {
   color: #333;
   font-family: "Borel", cursive;
   font-size: 250%;
+}
+
+h3 {
+  margin: 20px 0 20px 0px;
+  color: #333;
+  font-family: "Borel", cursive;
+  font-size: 180%;
+}
+
+h4{
+  margin: -10px 0 20px 0px;
+  color: #333;
+  font-family: "Borel", cursive;
+  font-size: 140%;
 }
 
 .borel-font {
